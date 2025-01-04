@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {
     // Health variables
     [SerializeField] private int maxHealth = 5;
@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Function to call in other scripts, if u want to call it you do TakeDamage("X") X = how much dmg u want to take
-    void TakeDamage(int damage) {
+    public void TakeDamage(int damage) {
         currentHealth -= damage;
 
         if (currentHealth <= 0) {

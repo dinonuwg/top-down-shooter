@@ -27,5 +27,12 @@ public class BulletScript : MonoBehaviour
     // When bullet collides with another object do
     private void OnTriggerEnter2D(Collider2D collision) {
         
+        // For collision with Player
+        if (collision.tag == "Player") {
+            var health = GetComponent<Health>(); // Gets the collision objects health script
+            if (health != null) { // If there is health
+                health.TakeDamage(1); // Take 1 DMG
+            }
+        }
     }
 }
