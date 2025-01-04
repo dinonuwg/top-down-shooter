@@ -3,10 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour {
 
-    [SerializeField] private GameObject bulletPrefab;
+    // Variables for shooting
+    [SerializeField] private GameObject bulletPrefab; // Which bullet that is gonna be shot out, drag into the player script in inspector
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletSpeed = 10f;
 
+    // Reference to camera
     private Camera mainCamera;
 
     private void Awake() {
@@ -21,8 +23,8 @@ public class PlayerShooting : MonoBehaviour {
     }
 
     // There is probably better code for this, will change in the future
-    
     private void Shoot() {
+        // Gets the Vector3 position (X,Y,Z) of cursor
         Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         mouseWorldPosition.z = 0; // Set z to 0 because this is a 2D game
 
