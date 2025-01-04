@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = maxHealth; // Set currentHealth to maxHealth at start
     }
 
     // Function to call in other scripts, if u want to call it you do TakeDamage("X") X = how much dmg u want to take
