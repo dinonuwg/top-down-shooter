@@ -34,5 +34,13 @@ public class BulletScript : MonoBehaviour
                 health.TakeDamage(1); // Take 1 DMG
             }
         }
+
+        // For collision with Enemy
+        if (collision.tag == "Enemy") {
+            var health = GetComponent<Health>(); // Gets the collision objects health script
+            if (health != null) { // If there is health
+                health.TakeDamage(1); // Take 1 DMG
+            }
+        }
     }
 }
