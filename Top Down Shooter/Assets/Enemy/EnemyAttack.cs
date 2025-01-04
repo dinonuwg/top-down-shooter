@@ -2,14 +2,13 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    [SerializeField] private int collisionDmg = 10;
-    [SerializeField] private Health playerHealth;
+    [SerializeField] private int collisionDmg = 1;
 
-    private void OnTriggerEnter2D(Collider2D trigger)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (trigger.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            playerHealth = GetComponent<Health>();
+            var playerHealth = collision.GetComponent<Health>();
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(collisionDmg);
