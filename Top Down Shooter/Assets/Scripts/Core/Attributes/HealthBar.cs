@@ -3,12 +3,13 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {   
-    // Healthbar variables
+    // -Variables-
     public Health health;
     public Image fillImage;
 
     private Slider healthBar;
 
+    // -Main Methods-
     void Awake()
     {
         healthBar = GetComponent<Slider>();

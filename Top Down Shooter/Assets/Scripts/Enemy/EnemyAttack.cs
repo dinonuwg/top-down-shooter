@@ -3,12 +3,14 @@ using System.Threading;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
-{
+{   
+    // -Variables-
     [SerializeField] private int enemyDamage = 1;
     [SerializeField] private int damageInterval = 1;
 
     private Coroutine damageCoroutine;
 
+    // -Main Methods-
     private void OnTriggerEnter2D(Collider2D collision)
     {   
         // If collision is with player

@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class HealthBarShowOnHit : MonoBehaviour // Currently used for EnemyHealthBar 01/04/2025
 {
-    // Healthbar variables
+    // -Variables-
     public Health health;
 
     public GameObject healthBar;
 
+    // -Main Methods-
     void Start()
     {
         healthBar.SetActive(false);

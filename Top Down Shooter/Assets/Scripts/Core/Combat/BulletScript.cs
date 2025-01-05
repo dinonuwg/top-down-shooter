@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    // Bullet variables
+    // -Variables-
     private float timer; // Variable for timer, starts at 0 seconds
     private int bulletDespawnTime = 3; // Time in seconds for bullet to despawn
 
     // Reference to collider
     private Collider2D bulletCollider;
 
+    // -Main Methods-
     void Start()
     {
         bulletCollider = GetComponent<Collider2D>(); // Automatically get Collider2D component without having to drag it in the inspector

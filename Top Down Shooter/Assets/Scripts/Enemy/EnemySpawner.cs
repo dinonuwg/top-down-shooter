@@ -1,7 +1,8 @@
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
-{
+{   
+    // -Variables-
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float initialMinimumSpawnTime = 10f;
     [SerializeField] private float initialMaximumSpawnTime = 15f;
@@ -15,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     private float timeUntilSpawn;
     private float elapsedTime; // Not used currently
 
+    // -Main Methods-
     void Awake()
     {   
         // Sets the spawn times to their initial/start value
@@ -37,6 +39,8 @@ public class EnemySpawner : MonoBehaviour
             SetTimeUntilSpawn("Timer") ;
         }
     }
+
+    // -Methods-
 
     // Starts timer until spawn
     private void SetTimeUntilSpawn(string spawnTimerType) {

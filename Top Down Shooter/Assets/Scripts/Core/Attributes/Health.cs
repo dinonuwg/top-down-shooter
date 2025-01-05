@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    // Health variables
+    // -Variables-
     public float maxHealth = 5f;
     public float currentHealth;
 
@@ -11,10 +11,13 @@ public class Health : MonoBehaviour
 
     [SerializeField] private GameObject floatingTextPrefab;
 
+    // -Main Methods-
     void Start()
     {
         currentHealth = maxHealth; // Set currentHealth to maxHealth at start
     }
+
+    // -Methods-
 
     // Function to call in other scripts, if u want to call it you do TakeDamage("X") X = how much dmg u want to take
     public void TakeDamage(int damage) {

@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour {
 
-    // Variables for shooting
+    // -Variables-
     [SerializeField] private GameObject bulletPrefab; // Which bullet that is gonna be shot out, drag into the player script in inspector
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletSpeed = 10f;
@@ -11,9 +11,13 @@ public class PlayerShooting : MonoBehaviour {
     // Reference to camera
     private Camera mainCamera;
 
+    // -Main Methods-
+
     private void Awake() {
         mainCamera = Camera.main;
     }
+
+    // -Methods-
 
     // When M1 or Enter is pressed start the Shoot function
     private void OnAttack(InputValue value) {
