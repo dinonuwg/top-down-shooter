@@ -9,7 +9,7 @@ public class EnemyChase : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        FindPlayer();
     }
 
     // Update is called once per frame
@@ -22,5 +22,14 @@ public class EnemyChase : MonoBehaviour
 
         // Moves enemy towards player
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, enemySpeed * Time.fixedDeltaTime);
+    }
+
+    void FindPlayer() {
+        player = GameObject.FindWithTag("Player");
+
+        // Check if the player was found
+        if (player == null) {
+            Debug.LogError("Player GameObject not found! Ensure the Player GameObject is tagged as 'Player'.");
+        }
     }
 }
