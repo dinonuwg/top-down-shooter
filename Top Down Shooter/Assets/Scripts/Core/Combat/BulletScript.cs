@@ -34,7 +34,6 @@ public class BulletScript : MonoBehaviour
             if (health != null) { // If there is health
                 health.TakeDamage(1); // Take 1 DMG
             }
-            Debug.Log("Hit Enemy");
             Destroy(gameObject);
         }
     }

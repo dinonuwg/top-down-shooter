@@ -1,34 +1,47 @@
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
+    // - Variables -
+    [SerializeField] private float moveSpeed = 5f;
 
-    // -Variables-
-    [SerializeField] private float moveSpeed = 5;
+    private Vector2 movement; // Stores movement input
+    private Rigidbody2D rb; // Reference to Rigidbody2D
+    private SpriteRenderer spriteRenderer; // Reference to SpriteRenderer
 
-    private Vector2 movement;
-
-    // Component references
-    private Rigidbody2D rb;
-
-    // -Main Methods-
-
-    void Awake() {
+    // - Main Methods -
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update function but doesn't depend on the individuals framerate
-    private void FixedUpdate() {
-        // Move the players rigidbody position to position + Vector2 direction * moveSpeed * deltatime 
-        // Deltatime which is used in physics code to make it work basically? Otherwise you are moving at 1000mph
+    private void FixedUpdate()
+    {
+        // Move the player's Rigidbody position based on input
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        // Flip the sprite if needed
+        if (movement.x != 0) // Only flip if there's horizontal movement
+        {
+            FlipSprite(movement);
+        }
     }
 
-    // -Methods-
-
-    // WASD Movement function, gets the Vector2 value of the direction you want to move and stores it in a variable
-    private void OnMove(InputValue value) {
+    // - Methods -
+    private void OnMove(InputValue value)
+    {
+        // Get movement input from Input System and store it
         movement = value.Get<Vector2>();
+    }
+
+    private void FlipSprite(Vector2 direction)
+    {
+        // Flip only the sprite by modifying SpriteRenderer's flipX property
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = direction.x < 0; // Flip sprite if moving left
+        }
     }
 }

@@ -10,7 +10,14 @@ public class EnemyAttack : MonoBehaviour
 
     private Coroutine damageCoroutine;
 
+    private Animator animator;
+    public bool isAttacking = false;
+
     // -Main Methods-
+    private void Start() {
+        animator = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {   
         // If collision is with player
@@ -20,8 +27,10 @@ public class EnemyAttack : MonoBehaviour
             var playerHealth = collision.GetComponent<Health>();
             // If there is a health component and coroutine isnt running
             if (playerHealth != null && damageCoroutine == null)
-            {   
+            {
                 // Start the coroutine for damage
+                isAttacking = true;
+                animator.SetBool("isAttacking", isAttacking);
                 damageCoroutine = StartCoroutine(DamagePlayerOverTime(playerHealth));
             }
         }
@@ -32,6 +41,8 @@ public class EnemyAttack : MonoBehaviour
         // Check if the existing objected has player tag and that the coroutine is running
         if (collision.gameObject.CompareTag("Player") && damageCoroutine != null) {
             // Stop the coroutine thats doing damage
+            isAttacking = false;
+            animator.SetBool("isAttacking", isAttacking);
             StopCoroutine(damageCoroutine);
             damageCoroutine = null; // Sets IEnumerator loop to false making it stop
         }
