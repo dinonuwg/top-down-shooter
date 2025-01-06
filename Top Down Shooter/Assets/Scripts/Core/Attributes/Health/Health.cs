@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
     // -Variables-
     [Header("Health Variables")]
-    [SerializeField] private GameObject floatingTextPrefab;
     [SerializeField] private float secondsToDie = 0.5f; // How long it takes to die
     public float maxHealth = 5f;
     public float currentHealth;
@@ -44,18 +44,10 @@ public class Health : MonoBehaviour
 
     // Function to call, in other scripts, if u want to call it you do TakeDamage("X") X = how much dmg u want to take
     public void TakeDamage(int damage) {
-        ShowDamage(damage.ToString());
         currentHealth -= damage;
 
         if (currentHealth <= 0) {
             Die();
-        }
-    }
-
-    void ShowDamage(string damageText) {
-        if (floatingTextPrefab) {
-            GameObject prefab = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
-            prefab.GetComponentInChildren<TextMesh>().text = damageText;
         }
     }
 
