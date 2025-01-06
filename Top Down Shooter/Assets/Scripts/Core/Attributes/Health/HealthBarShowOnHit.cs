@@ -16,8 +16,14 @@ public class HealthBarShowOnHit : MonoBehaviour // Currently used for EnemyHealt
     void Update()
     {   
         // If currentHealth isnt equal to maxHealth enable healthBar
-        if (health.currentHealth != health.maxHealth) {
+        if (health.currentHealth != health.maxHealth && health.currentHealth != 0) {
             healthBar.SetActive(true);
+        } else if (health.currentHealth <= 0) {
+
         }
+            
     }
+
+
+    
 }
