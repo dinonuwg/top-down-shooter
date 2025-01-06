@@ -525,6 +525,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -9066324158863836083, guid: 035a38816ef7c764cb1d22c6421bfec7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 79275999, guid: 7b175ed465d8f5a499643a9be161bc17, type: 3}
+    - target: {fileID: -9066324158863836083, guid: 035a38816ef7c764cb1d22c6421bfec7, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 0
       objectReference: {fileID: 0}
