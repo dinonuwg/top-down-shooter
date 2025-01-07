@@ -11,6 +11,8 @@ public class EnemyChase : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private float distance;
     private Vector2 lastDirection;
+
+    private HealthBase health;
     
 
     // -Main Methods-
@@ -19,12 +21,15 @@ public class EnemyChase : MonoBehaviour
         FindPlayer();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        health = GetComponent<HealthBase>();    
     }
 
 
     void FixedUpdate()
     {   
-        ChasePlayer();
+        if (health.isAlive) {
+            ChasePlayer();
+        }
     }
     
     // -Methods-

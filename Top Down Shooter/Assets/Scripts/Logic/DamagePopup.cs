@@ -30,12 +30,12 @@ public class DamagePopup : MonoBehaviour
         textMesh.SetText(damageAmount.ToString());
         if (!isCriticalHit ) {
             // Normal Hit
-            textMesh.fontSize = 12;
-            textColor = UtilsClass.GetColorFromString("FFC500");
+            textMesh.fontSize = 12; 
+            textColor = UtilsClass.GetColorFromString("FFFF4D");
         } else {
             // Critical hit
             textMesh.fontSize = 16;
-            textColor = UtilsClass.GetColorFromString("FF2B00");
+            textColor = UtilsClass.GetColorFromString("FF3C3C");
         }
         textMesh.color = textColor;
         disappearTimer = DISAPPEAR_TIMER_MAX;

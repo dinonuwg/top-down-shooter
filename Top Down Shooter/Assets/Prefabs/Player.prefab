@@ -283,7 +283,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d086d2e82457941a40912e9e5a9462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  acceleration: 30
   moveSpeed: 10
+  deceleration: 20
+  dashSpeed: 30
+  dashDuration: 0.2
+  dashCooldown: 1
 --- !u!114 &6988641822566261605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +334,8 @@ MonoBehaviour:
   maxHealth: 50
   currentHealth: 0
   isAlive: 1
+  blinkDuration: 0.5
+  blinkInterval: 0.1
 --- !u!114 &143921707274151942
 MonoBehaviour:
   m_ObjectHideFlags: 0

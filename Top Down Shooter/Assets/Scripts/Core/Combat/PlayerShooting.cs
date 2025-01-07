@@ -8,6 +8,8 @@ public class PlayerShooting : MonoBehaviour {
     [SerializeField] private Transform firePoint;
     [SerializeField] private float bulletSpeed = 10f;
 
+    private Animator animator;
+
     // Reference to camera
     private Camera mainCamera;
 
@@ -15,6 +17,7 @@ public class PlayerShooting : MonoBehaviour {
 
     private void Awake() {
         mainCamera = Camera.main;
+        animator = GetComponent<Animator>();
     }
 
     // -Methods-

@@ -7,10 +7,13 @@ public class PlayerBombing : MonoBehaviour {
     [SerializeField] private GameObject bombPrefab;
     [SerializeField] private Camera mainCamera;
 
+    private Animator animator;
+
     private float timer;
 
     private void Awake() {
         mainCamera = Camera.main;
+        animator = GetComponent<Animator>();    
     }
 
     private void Update() {
@@ -21,6 +24,7 @@ public class PlayerBombing : MonoBehaviour {
         if (value.isPressed && timer <= 0) {
             Bomb();
             timer = 2f;
+            animator.SetTrigger("Snap");
         }
     }
 

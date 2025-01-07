@@ -13,8 +13,9 @@ public class BombScript : MonoBehaviour
     public bool isTicking = true;
     public bool isExploding = false;
 
-    [SerializeField] private int explosionDamage = 20;
-    [SerializeField] private float explosionRadius = 4f;
+    [SerializeField] private int explosionDamage = 50;
+    [SerializeField] private float explosionRadius = 5f;
+    [SerializeField] private ParticleSystem explosionPrefab;
 
     void Start()
     {
@@ -23,6 +24,8 @@ public class BombScript : MonoBehaviour
 
         bombCollider.enabled = false;
         animator.SetBool("isTicking", isTicking);
+
+        explosionPrefab.Stop();
     }
 
     void Update()
@@ -37,6 +40,8 @@ public class BombScript : MonoBehaviour
     private void Explode() {
         isTicking = false;
         isExploding = true;
+
+        explosionPrefab.Play();
 
         animator.SetBool("isTicking", isTicking);
         animator.SetBool("isExploding", isExploding);

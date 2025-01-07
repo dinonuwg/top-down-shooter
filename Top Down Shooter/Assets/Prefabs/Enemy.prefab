@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  enemySpeed: 3
+  enemySpeed: 5
   isChasing: 0
 --- !u!95 &8766144150401692184
 Animator:
@@ -525,6 +525,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   isAlive: 1
+  blinkDuration: 0.5
+  blinkInterval: 0.1
   experienceToGive: 1
 --- !u!1 &7143222877254696013
 GameObject:
