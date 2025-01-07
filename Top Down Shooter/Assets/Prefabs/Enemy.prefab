@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d70a19bfcad9b41b1a11ab023e408d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 735161401455756109}
+  health: {fileID: 4350570872093944310}
   fillImage: {fileID: 905522127975988018}
 --- !u!1 &1290955707408684863
 GameObject:
@@ -302,10 +302,10 @@ GameObject:
   - component: {fileID: -9066324158863836083}
   - component: {fileID: 5771383730975143937}
   - component: {fileID: 9156628710153378633}
-  - component: {fileID: 735161401455756109}
   - component: {fileID: -25293911035783553}
   - component: {fileID: 1855068420723390765}
   - component: {fileID: 8766144150401692184}
+  - component: {fileID: 4350570872093944310}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -373,7 +373,7 @@ SpriteRenderer:
   m_SortingLayerID: -1762007255
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 551235815, guid: f14522fbaf3c85a4ea5ea4c217748f04, type: 3}
+  m_Sprite: {fileID: 79275999, guid: 7b175ed465d8f5a499643a9be161bc17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -457,25 +457,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.3572264, y: 2.4514992}
   m_EdgeRadius: 0
---- !u!114 &735161401455756109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5132656242288894405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55344d58bfe96444c96dc6a743e29cfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  floatingTextPrefab: {fileID: 1654941391518861769, guid: 2fcd9514ff6615c4f9762d937f44c71e, type: 3}
-  secondsToDie: 0.5
-  maxHealth: 5
-  currentHealth: 0
-  isAlive: 1
-  experienceToGive: 1
-  isEnemy: 1
 --- !u!114 &-25293911035783553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +509,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4350570872093944310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132656242288894405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38f5ede7c1b5b94283af471594bebbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToDie: 0.5
+  maxHealth: 100
+  currentHealth: 0
+  isAlive: 1
+  experienceToGive: 1
 --- !u!1 &7143222877254696013
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2438b1c9ea845a84c8c96b7bf657dc66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 735161401455756109}
+  health: {fileID: 4350570872093944310}
   healthBar: {fileID: 1274030824048653212}
 --- !u!1 &8314468771087601502
 GameObject:

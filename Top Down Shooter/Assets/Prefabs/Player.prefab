@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 7082337546674640664}
   - component: {fileID: 719834153594948423}
   - component: {fileID: 6988641822566261605}
-  - component: {fileID: 3743823594453236787}
+  - component: {fileID: 5713188218940045915}
   - component: {fileID: 143921707274151942}
   - component: {fileID: 8689037129038179733}
   m_Layer: 0
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &610319946908172392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -298,7 +298,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8068112438990783287, guid: 350e4c052c72c6d40a298093ad2c8646, type: 3}
   firePoint: {fileID: 8914169731096934533}
   bulletSpeed: 30
---- !u!114 &3743823594453236787
+--- !u!114 &5713188218940045915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,16 +307,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7547819470740290917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55344d58bfe96444c96dc6a743e29cfc, type: 3}
+  m_Script: {fileID: 11500000, guid: 101d3a7053294f64d8fde29fffe7eb7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatingTextPrefab: {fileID: 1654941391518861769, guid: 2fcd9514ff6615c4f9762d937f44c71e, type: 3}
   secondsToDie: 0.5
-  maxHealth: 5
+  maxHealth: 50
   currentHealth: 0
   isAlive: 1
-  experienceToGive: 1
-  isEnemy: 0
 --- !u!114 &143921707274151942
 MonoBehaviour:
   m_ObjectHideFlags: 0

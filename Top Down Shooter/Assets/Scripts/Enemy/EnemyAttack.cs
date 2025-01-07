@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {   
     // -Variables-
-    [SerializeField] private int enemyDamage = 1;
+    [SerializeField] private int enemyDamage = 5;
     [SerializeField] private int damageInterval = 1;
 
     private Coroutine damageCoroutine;
@@ -24,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {   
             // Get health component from the player
-            var playerHealth = collision.GetComponent<Health>();
+            var playerHealth = collision.GetComponent<HealthBase>();
             // If there is a health component and coroutine isnt running
             if (playerHealth != null && damageCoroutine == null)
             {
@@ -49,7 +49,7 @@ public class EnemyAttack : MonoBehaviour
     }
 
     // Coroutine to apply damage to the player repeateadly at set intervals
-    private IEnumerator DamagePlayerOverTime(Health playerHealth) {
+    private IEnumerator DamagePlayerOverTime(HealthBase playerHealth) {
         while (true) { // Infinite loop that keeps applying damage until stopped
             playerHealth.TakeDamage(enemyDamage);
             yield return new WaitForSeconds(damageInterval);

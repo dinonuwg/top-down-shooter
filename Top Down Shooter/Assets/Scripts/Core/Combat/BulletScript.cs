@@ -30,9 +30,9 @@ public class BulletScript : MonoBehaviour
 
         // For collision with Enemy
         if (collision.tag == "Enemy") {
-            var health = collision.GetComponent<Health>(); // Gets the collision objects health script
+            var health = collision.GetComponent<HealthBase>(); // Gets the collision objects healthbase script
             if (health != null) { // If there is health
-                health.TakeDamage(1); // Take 1 DMG
+                health.TakeDamage(10); // Take 10 DMG
             }
             Destroy(gameObject);
         }

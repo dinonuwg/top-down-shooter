@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {   
     // -Variables-
-    public Health health;
+    public HealthBase health;
     public Image fillImage;
 
     private Slider healthBar;

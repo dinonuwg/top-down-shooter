@@ -583,7 +583,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317266470}
-  - component: {fileID: 1317266469}
   - component: {fileID: 1317266471}
   m_Layer: 0
   m_Name: objSpawner
@@ -592,20 +591,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1317266469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317266468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02ad28699c6b72443b624435a85d1a75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBomb: {fileID: 0}
-  mainCamera: {fileID: 519420031}
 --- !u!4 &1317266470
 Transform:
   m_ObjectHideFlags: 0
