@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 7082337546674640664}
   - component: {fileID: 719834153594948423}
   - component: {fileID: 6988641822566261605}
+  - component: {fileID: 3223295835229429534}
   - component: {fileID: 5713188218940045915}
   - component: {fileID: 143921707274151942}
   - component: {fileID: 8689037129038179733}
@@ -156,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: -1762007255
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4507511648117860291, guid: 2ba4607dfe7c51f4ea0f3a220a120568, type: 3}
+  m_Sprite: {fileID: 8440343072305055367, guid: f2ab7c854e35a99448796b8ac1793d0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -205,7 +206,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.3333335, y: 5.3333335}
+    oldSize: {x: 4, y: 4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -298,6 +299,20 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8068112438990783287, guid: 350e4c052c72c6d40a298093ad2c8646, type: 3}
   firePoint: {fileID: 8914169731096934533}
   bulletSpeed: 30
+--- !u!114 &3223295835229429534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547819470740290917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b46f9b82a9e964289db98a00edfba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 3868301262403177591, guid: f55587c5706434c438fda5084583bb5a, type: 3}
+  mainCamera: {fileID: 0}
 --- !u!114 &5713188218940045915
 MonoBehaviour:
   m_ObjectHideFlags: 0

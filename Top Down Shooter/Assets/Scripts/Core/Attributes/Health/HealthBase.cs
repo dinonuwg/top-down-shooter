@@ -17,7 +17,7 @@ public class HealthBase : MonoBehaviour {
     }
 
     public virtual void TakeDamage(int damage) {
-        damage = UnityEngine.Random.Range(1, damage);
+        damage = UnityEngine.Random.Range(damage, damage * 2);
         bool isCritical = UnityEngine.Random.Range(0, 100) < 30;
         if (isCritical) damage *= 2;
 
